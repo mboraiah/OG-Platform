@@ -1,5 +1,5 @@
 project.group = 'com.opengamma'
-project.version = '1.2.2-SNAPSHOT'
+project.version = '1.2.2'
 
 subprojects {
     apply plugin: 'java'
@@ -9,7 +9,7 @@ subprojects {
     targetCompatibility = 1.6
 
     project.group = 'com.rapture'
-    project.version = '1.2.2-SNAPSHOT'
+    project.version = '1.2.2'
 
     def incaptureRepo = 'http://incapture.github.com/RaptureRepo/repository'
 

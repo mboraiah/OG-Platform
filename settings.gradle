@@ -1,4 +1,4 @@
-include "projects/OG-Analytics"
+include "projects:OG-Analytics"
 //include "projects/OG-Bloomberg"
 //include "projects/OG-BloombergExample"
 //include "projects/OG-Client"
@@ -17,7 +17,7 @@ include "projects/OG-Analytics"
 //include "projects/OG-Provider"
 //include "projects/OG-Security"
 //include "projects/OG-Server"
-include "projects/OG-Util"
+include "projects:OG-Util"
 //include "projects/OG-Web"
 
 

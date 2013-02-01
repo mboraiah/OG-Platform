@@ -21,6 +21,16 @@ subprojects {
             maven {
                 url = incaptureRepo
             }
+            maven {
+                url = "http://maven.opengamma.com/nexus/content/groups/public/"
+            }
+            ivy {
+                credentials {
+                    username 'opengamma'
+                    password 'opengamma'
+                }
+                artifactPattern "http://ivyrepo.opengamma.com/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"
+           }
     }
 
     uploadArchives {
@@ -44,10 +54,10 @@ subprojects {
            compile 'org.apache.commons:commons-math:2.1'
            compile 'commons-pool:commons-pool:1.5.5'
            compile 'com.google.guava:guava:12.0'
-           compile 'org.fudgemsg:fudge-java:0.3.9.4'
-           compile 'org.fudgemsg:fudge-proto:0.3.9.2'
+           compile 'org.fudgemsg:fudge-java:0.3.9.1'
+           compile 'org.fudgemsg:fudge-proto:0.3.9.1'
            compile 'com.opengamma.external.threeten:threeten-core:0.6.4'
-          compile 'com.opengamma.external.json:json:1.0.0.v20101106'
+           compile 'com.opengamma.external.json:json:1.0.0.v20101106'
           compile 'org.joda:joda-convert:1.2'
           compile 'org.joda:joda-beans:0.6'
           compile 'com.opengamma:elsql:0.7'
@@ -85,13 +95,14 @@ subprojects {
           compile 'org.springframework:spring-test:3.0.7.RELEASE'
           compile 'org.springframework:spring-test:3.0.7.RELEASE'
           compile 'org.springframework:spring-web:3.0.7.RELEASE'
-          compile 'org.springframework:spring-security-core:2.0.7.RELEASE'
+          //compile 'org.springframework:spring-security-core:2.0.7.RELEASE'
           compile 'javax.ws.rs:jsr311-api:1.1.1'
           compile 'javax.servlet:servlet-api:2.5'
           compile 'javax.servlet:jstl:1.2'
           compile 'com.sun.jersey:jersey-servlet:1.12'
-          compile 'com.sun.jersey:jerset-client:1.12'
-          compile 'com.sun.jersey:jersey-sprint:1.12'
+          compile 'com.sun.jersey:jersey-client:1.12'
+          compile 'com.sun.jersey:jersey-bundle:1.12'
+          compile 'com.sun.jersey.contribs:jersey-spring:1.12'
           compile 'com.sun.jersey.contribs:jersey-multipart:1.12'
           compile 'org.freemarker:freemarker:2.3.19'
           compile 'com.yahoo.platform.yui:yuicompressor:2.4.2'
@@ -115,9 +126,8 @@ subprojects {
           compile 'org.apache.derby:derby:10.6.1.0'
           compile 'org.mongodb:mongo-java-driver:2.7.3'
           compile 'redis.clients:jedis:2.1.0'
-      <!-- Testing -->
           compile 'org.testng:testng:6.3.1'
-          test 'org.mockito:mockito-all:1.9.0'
+          compile 'org.mockito:mockito-all:1.9.0'
           compile 'org.apache.maven:maven-plugin-api:3.0.4'
           compile 'org.apache.maven:maven-project:2.2.1'
           compile 'org.apache.maven:maven-artifact:2.2.1'
